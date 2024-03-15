@@ -59,7 +59,12 @@ public class Delivery {
 
          });
         */
-
+        Delivery delivery = new Delivery();
+        delivery.setAddress(orderPlaced.getAddress());
+        delivery.setQuantity(orderPlaced.getQty());
+        delivery.setCustomerId(orderPlaced.getCustomerId());
+        delivery.setOrderId(orderPlaced.getId());
+        repository().save(delivery);
     }
     //>>> Clean Arch / Port Method
 
